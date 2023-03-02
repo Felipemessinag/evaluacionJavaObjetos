@@ -81,7 +81,7 @@ public static Double promedioNotas(ArrayList<Double> notas){
 		int cantidadDeNotas;
 		String asignaturaProfesor;
 		Asignatura asignaturaUsuario = new Asignatura();
-		//este es un mensaje de prueba para Github
+		//En esta sección se solicitarán datos para armar el curso, como el nombre del profesor, la asignatura que imparte y la cantidad de alumnos que tiene su curso. Estos datos de asignarán a los objetos creados para utilizarse posteriormente.
 		do{
 			Curso cursoUsuario = new Curso();
 			System.out.println("Indíquenos el nombre del profesor a cargo del curso: ");
@@ -102,7 +102,7 @@ public static Double promedioNotas(ArrayList<Double> notas){
 		} while (cantidadAlumnos <= 0);
 			System.out.print(cursoPrograma);
 			System.out.println(" para la asignatura de " + asignaturaProfesor);
-
+			//En esta sección solicitaremos el nombre de los alumnos y la cantidad de nota por alumno para posteriormente mostrar en pantalla las notas por alumno y sus promedios.
 			do{
 				System.out.println("Indique la cantidad de notas por alumno: ");
 				cantidadDeNotas = teclado.nextInt();
@@ -128,7 +128,7 @@ public static Double promedioNotas(ArrayList<Double> notas){
 				libroDeNotas.put(nombAlumno, notasAlumno);
 				System.out.println("Los datos ingresados hasta el momento son: " +libroDeNotas);
 			}
-				
+				//Esta parte corresponde al menú, en el que se dan 3 opciones por las 3 funciones que debía contener el programa.
 				int opcion = 1;
 				System.out.println("****************************Comienzo del menú***********************");
 				while(opcion!=0){
