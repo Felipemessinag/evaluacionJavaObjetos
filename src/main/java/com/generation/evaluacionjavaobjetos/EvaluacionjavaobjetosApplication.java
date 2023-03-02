@@ -36,7 +36,7 @@ Puntos a considerar:
  */
 //Esta función permite calcular el promedio de las notas de los alumnos
 public static Double promedioNotas(ArrayList<Double> notas){
-	double suma = 0; //este es un mensaje de pruba
+	double suma = 0;
 	for (int i = 0; i < notas.size(); i++) {
 		suma += notas.get(i);
 		
@@ -81,7 +81,7 @@ public static Double promedioNotas(ArrayList<Double> notas){
 		int cantidadDeNotas;
 		String asignaturaProfesor;
 		Asignatura asignaturaUsuario = new Asignatura();
-
+		//este es un mensaje de prueba para Github
 		do{
 			Curso cursoUsuario = new Curso();
 			System.out.println("Indíquenos el nombre del profesor a cargo del curso: ");
@@ -118,18 +118,17 @@ public static Double promedioNotas(ArrayList<Double> notas){
 				System.out.println("Ingrese el nombre y apellido del alumno " + i + ". " );
 				nombAlumno = teclado.nextLine();
 				alumnoUsuario.setNombre(nombAlumno);
-				alumnoUsuario.setCantidadNotas(cantidadDeNotas);
+				//alumnoUsuario.setCantidadNotas(cantidadDeNotas);
 				for(int j = 1; j <= cantidadDeNotas; j++ ){
-					System.out.println("Ingrese la nota " + j + " de " + alumnoUsuario.getNombre() + ": ");
-					double nota = teclado.nextDouble();
-					notasAlumno.add(nota);
+					System.out.println("Ingrese la nota " + j + " de " + nombAlumno + ": ");
+					double notas = teclado.nextDouble();
+					notasAlumnos.add(notas);
 				}
 				
-				System.out.println(libroDeNotas);
-				// System.out.println("Los datos ingresados hasta el momento son: " +libroDeNotas);
-				
+				libroDeNotas.put(nombAlumno, notasAlumno);
+				System.out.println("Los datos ingresados hasta el momento son: " +libroDeNotas);
 			}
-			libroDeNotas.put(nombAlumno, notasAlumno);
+				
 				int opcion = 1;
 				System.out.println("****************************Comienzo del menú***********************");
 				while(opcion!=0){
@@ -147,10 +146,10 @@ public static Double promedioNotas(ArrayList<Double> notas){
 					}while (opcion <0 || opcion > 3);
 					if (opcion == 1){
 
-						for(String k : libroDeNotas.keySet()){
+						for(String i : libroDeNotas.keySet()){
 							
-							Double promedioAlum = promedioNotas(libroDeNotas.get(k));
-							System.out.println("El promedio del alumno "+ k + " es : " + promedioAlum);
+							Double promedioAlum = promedioNotas(libroDeNotas.get(i));
+							System.out.println("El promedio de "+ i + " es : " + promedioAlum);
 						}
 						
 						
@@ -165,7 +164,7 @@ public static Double promedioNotas(ArrayList<Double> notas){
 		
 
 
-		
+		teclado.close();
 	}
 
 }
