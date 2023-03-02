@@ -36,7 +36,7 @@ Puntos a considerar:
  */
 //Esta función permite calcular el promedio de las notas de los alumnos
 public static Double promedioNotas(ArrayList<Double> notas){
-	double suma = 0;
+	double suma = 0; //este es un mensaje de pruba
 	for (int i = 0; i < notas.size(); i++) {
 		suma += notas.get(i);
 		
